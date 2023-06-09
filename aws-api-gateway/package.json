@@ -1,0 +1,31 @@
+{
+  "name": "example-aws-api-gateway",
+  "version": "1.0.0",
+  "description": "Example for JWT verification with AWS API Gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/userfront/example-aws-api-gateway.git"
+  },
+  "keywords": [
+    "Userfront",
+    "AWS",
+    "Lambda",
+    "AWS",
+    "API",
+    "Gateway"
+  ],
+  "author": "Userfront",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/userfront/example-aws-api-gateway/issues"
+  },
+  "homepage": "https://github.com/userfront/example-aws-api-gateway#readme",
+  "dependencies": {
+    "aws-xray-sdk": "^3.3.4",
+    "jsonwebtoken": "^8.5.1"
+  }
+}

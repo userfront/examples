@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  backend:
+    container_name: fastapi
+    build: ./backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/code
+    environment:
+      - USERFRONT_PUBLIC_KEY
+  frontend:
+    container_name: nextjs
+    build: ./frontend
+    volumes:
+      - ./frontend:/code
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_USERFRONT_ACCOUNT_ID=$USERFRONT_ACCOUNT_ID
