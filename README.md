@@ -1,6 +1,6 @@
 # Userfront Examples
 
-Found here is a collection of examples for using Userfront with various frameworks and technologies. 
+This is a collection of examples for using Userfront with various frontend and backend technologies. 
 
 - [AWS API Gateway](https://github.com/userfront/examples/tree/main/aws-api-gateway)
 - [FastAPI](https://github.com/userfront/examples/tree/main/fastapi)
