@@ -1,0 +1,18 @@
+{
+  "name": "nextjs-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@userfront/react": "^0.3.3",
+    "jsonwebtoken": "^8.5.1",
+    "next": "^12.3.1",
+    "next-cookies": "^2.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
