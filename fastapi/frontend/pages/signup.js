@@ -1,4 +1,4 @@
-import { SignupForm } from "@userfront/react";
+import { SignupForm } from "@userfront/toolkit/react";
 import { refreshIdentityAndCookies } from "../common/auth.js";
 import Navbar from "../components/navbar.js";
 
