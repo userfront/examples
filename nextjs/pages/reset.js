@@ -1,4 +1,4 @@
-import { PasswordResetFormForm } from "@userfront/toolkit/react";
+import { PasswordResetForm } from "@userfront/toolkit/react";
 import { getPropsFromAccessToken } from "../common/auth.js";
 import Navbar from "../components/navbar.js";
 
