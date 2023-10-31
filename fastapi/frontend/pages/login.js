@@ -1,4 +1,4 @@
-import { LoginForm } from "@userfront/react";
+import { LoginForm } from "@userfront/toolkit/react";
 import { refreshIdentityAndCookies } from "../common/auth.js";
 import Navbar from "../components/navbar.js";
 

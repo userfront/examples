@@ -1,4 +1,4 @@
-import { PasswordResetForm} from "@userfront/react";
+import { PasswordResetForm } from "@userfront/toolkit/react";
 import { refreshIdentityAndCookies } from "../common/auth.js";
 import Navbar from "../components/navbar.js";
 
