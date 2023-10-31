@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Userfront from "@userfront/vue";
+import Userfront from "@userfront/toolkit/vue";
 
 export default {
   computed: {

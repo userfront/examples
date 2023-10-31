@@ -1,12 +1,13 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Userfront from "@userfront/vue";
 
-import Home from "../views/Home.vue";
-import Login from "../views/Login.vue";
-import Reset from "../views/Reset.vue";
-import Dashboard from "../views/Dashboard.vue";
-import Admin from "../views/Admin.vue";
+import Userfront from "@userfront/toolkit/vue";
+
+import HomeView from "../views/HomeView.vue";
+import LoginView from "../views/LoginView.vue";
+import ResetView from "../views/ResetView.vue";
+import DashboardView from "../views/DashboardView.vue";
+import AdminView from "../views/AdminView.vue";
 
 Vue.use(VueRouter);
 
@@ -14,33 +15,33 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: HomeView,
   },
   {
     path: "/login",
     name: "Login",
-    component: Login,
+    component: LoginView,
   },
   {
     path: "/reset",
     name: "Reset",
-    component: Reset,
+    component: ResetView,
   },
   {
     path: "/dashboard",
     name: "Dashboard",
-    component: Dashboard,
+    component: DashboardView,
   },
   {
     path: "/admin",
     name: "Admin",
-    component: Admin,
+    component: AdminView,
   },
 ];
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: import.meta.env.BASE_URL,
   routes,
 });
 
