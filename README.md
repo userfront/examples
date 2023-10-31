@@ -9,7 +9,7 @@ This is a collection of examples for using Userfront with various frontend and b
 - [PHP](https://github.com/userfront/examples/tree/main/php)
 - [React](https://github.com/userfront/examples/tree/main/react)
 - [React Native](https://github.com/userfront/examples/tree/main/react-native)
-- [Vue](https://github.com/userfront/examples/tree/main/vue)
+- [Vue 2](https://github.com/userfront/examples/tree/main/vue2)
 
 Each example is a fully functional app that you can clone and run locally following the instructions found in each README. We will try to keep these up to date with the latest versions.
 
