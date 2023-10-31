@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Userfront from "@userfront/react";
+import Userfront from "@userfront/toolkit/react";
 import Navbar from "../components/navbar.js";
 import { getPropsFromAccessToken } from "../common/auth.js";
 import styles from "../styles/Dashboard.module.css";

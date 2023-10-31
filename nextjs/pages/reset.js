@@ -1,10 +1,6 @@
-import Userfront from "@userfront/react";
+import { PasswordResetFormForm } from "@userfront/toolkit/react";
 import { getPropsFromAccessToken } from "../common/auth.js";
 import Navbar from "../components/navbar.js";
-
-const PasswordResetForm = Userfront.build({
-  toolId: "dkbmmo",
-});
 
 function PasswordReset({ isLoggedIn }) {
   return (

@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@userfront/react": "^0.3.3",
+    "@userfront/toolkit": "^1.0.2",
     "jsonwebtoken": "^8.5.1",
     "next": "^12.3.1",
     "next-cookies": "^2.0.3",

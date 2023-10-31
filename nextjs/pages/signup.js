@@ -1,10 +1,6 @@
-import Userfront from "@userfront/react";
+import { SignupForm } from "@userfront/toolkit/react";
 import { getPropsFromAccessToken } from "../common/auth.js";
 import Navbar from "../components/navbar.js";
-
-const SignupForm = Userfront.build({
-  toolId: "nkmbbm",
-});
 
 function Signup({ isLoggedIn }) {
   return (

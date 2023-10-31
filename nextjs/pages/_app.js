@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Userfront from "@userfront/react";
+import Userfront from "@userfront/toolkit/react";
 
 Userfront.init("demo1234");
 
