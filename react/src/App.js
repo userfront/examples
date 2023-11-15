@@ -7,7 +7,7 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import Userfront, { SignupForm, LoginForm, PasswordResetForm } from "@userfront/toolkit";
+import Userfront, { SignupForm, LoginForm, PasswordResetForm } from "@userfront/toolkit/react";
 
 Userfront.init("demo1234");
 
