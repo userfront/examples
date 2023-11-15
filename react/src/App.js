@@ -7,19 +7,9 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import Userfront from "@userfront/react";
+import Userfront, { SignupForm, LoginForm, PasswordResetForm } from "@userfront/toolkit/react";
 
 Userfront.init("demo1234");
-
-const SignupForm = Userfront.build({
-  toolId: "nkmbbm",
-});
-const LoginForm = Userfront.build({
-  toolId: "alnkkd",
-});
-const PasswordResetForm = Userfront.build({
-  toolId: "dkbmmo",
-});
 
 export default function App() {
   return (

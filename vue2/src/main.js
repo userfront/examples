@@ -1,11 +1,12 @@
 import Vue from "vue";
-import Userfront from "@userfront/vue";
+import Userfront from "@userfront/toolkit/vue";
+
 import App from "./App.vue";
 import router from "./router";
 
-Userfront.init("demo1234");
+import "./assets/main.css";
 
-Vue.config.productionTip = false;
+Userfront.init("demo1234");
 
 new Vue({
   router,

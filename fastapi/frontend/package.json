@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@userfront/react": "^1.0.0-alpha.9",
+    "@userfront/toolkit": "^1.0.2",
     "cookies-next": "^2.1.1",
     "jose": "^4.14.0",
     "jsonwebtoken": "^9.0.0",

@@ -1,6 +1,6 @@
 import cookies from "next-cookies";
 import jwt from "jsonwebtoken";
-import Userfront from "@userfront/react";
+import Userfront from "@userfront/toolkit/react";
 
 const publicKey = `-----BEGIN RSA PUBLIC KEY-----
 MIIBCgKCAQEAodD/IEagav7wlBX+k30YOSFpYT0u7AtV3ljwC52ShCFFGVvw86T5

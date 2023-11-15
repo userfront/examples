@@ -1,4 +1,4 @@
-import Userfront from "@userfront/react";
+import Userfront from "@userfront/toolkit/react";
 
 import "@userfront/react/themes/default.css";
 import "../styles/globals.css";
