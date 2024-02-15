@@ -1,6 +1,6 @@
 import { getCookie, setCookie, hasCookie, deleteCookie } from "cookies-next";
 import * as jose from "jose";
-import Userfront from "@userfront/react";
+import Userfront from "@userfront/toolkit/react";
 
 
 // Need to ensure we are in NodeJS runtime (not Edge runtime) to access the ctx.res response object
@@ -11,13 +11,7 @@ export const config = {
   runtime: "nodejs"
 }
 
-// Set up the JSON Web Key Set (JWKS) - fetch our public key from Userfront as needed.
-// TODO: this would usually be cached and revalidated periodically or as needed; need to research how to do that with Next serverless or edge functions
-// TODO: we need to know whether we're in test or live mode, and don't have enough information to determine that here
-//    (we would need to send a /mode request with origin = ctx.resolvedUrl - see https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter)
-// TODO: use this in the backend portion as well
-const JWKS = jose.createRemoteJWKSet(new URL(`https://api.userfront.com/v0/tenants/${process.env.NEXT_PUBLIC_USERFRONT_ACCOUNT_ID}/jwks?test=false`));
-const refreshUrl = new URL(`https://api.userfront.com/v0/tenants/${process.env.NEXT_PUBLIC_USERFRONT_ACCOUNT_ID}/refresh`);
+const refreshUrl = new URL(`https://api.userfront.com/v0/tenants/${process.env.NEXT_PUBLIC_USERFRONT_WORKSPACE_ID}/refresh`);
 
 // JWT libraries like jose have a pattern of throwing when a JWT does not verify.
 // Convert such a call into one that returns null if the function throws, so we can
@@ -70,7 +64,7 @@ export async function refreshIdentityAndCookies(ctx) {
     // TODO: we need to know whether we're in test or live mode, and don't have enough information to determine that here
     //    (we would need to send a /mode request with origin = ctx.resolvedUrl - see https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props#context-parameter)
     // TODO: use this in the backend portion as well
-    const JWKS = jose.createRemoteJWKSet(new URL(`https://api.userfront.com/v0/tenants/${publicRuntimeConfig.accountId}/jwks?test=${isTestMode}`));
+    const JWKS = jose.createRemoteJWKSet(new URL(`https://api.userfront.com/v0/tenants/${process.env.NEXT_PUBLIC_USERFRONT_WORKSPACE_ID}/jwks?test=${isTestMode}`));
 
     const isLoggedIn = hasCookie(Userfront.tokens.accessTokenName, ctx);
     if (!isLoggedIn) {
