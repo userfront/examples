@@ -19,8 +19,8 @@ In your [AWS Lambda dashboard](https://console.aws.amazon.com/lambda/home#/funct
 Next, use your terminal to clone this repo to a local directory on your computer:
 
 ```
-git clone https://github.com/userfront/example-aws-api-gateway.git
-cd example-aws-api-gateway
+git clone https://github.com/userfront/examples.git
+cd example/aws-api-gateway
 npm install
 ```
 
