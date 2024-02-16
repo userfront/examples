@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Userfront, { SignupForm, LoginForm, PasswordResetForm, LogoutButton } from "@userfront/toolkit/react";
 
-Userfront.init("rbv549xn");
+Userfront.init("demo1234");
 
 export default function App() {
   return (

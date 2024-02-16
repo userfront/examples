@@ -8,8 +8,8 @@ This is a simple demo Flutter app that uses the `userfront_flutter` library for 
   - Once the `flutter` command line tool is installed, use `flutter doctor` to check configuration
 - Clone the repo
 - Install packages: `flutter pub get`
-- Set your tenant ID and live domain in `lib/main.dart` (line 12) or use those provided.
-  - To use your own tenant and live domain make sure the url on line 63 is where your login form lives. [See userfront flutter docs](https://github.com/userfront/flutter#usage).
+- Set your workspace ID ([located in your dashboard](https://userfront.com/dashboard)) and live domain in `lib/main.dart` (line 12) or use those provided.
+  - To use your own workspace and live domain make sure the url on line 63 is where your login form lives. [See userfront flutter docs](https://github.com/userfront/flutter#usage).
 - Run the app in an iOS or Android emulator with `flutter run`
   - On MacOS, the VS Code Dart/Flutter plugin launches an iOS emulator connected to the running code in watch mode
 
