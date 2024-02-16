@@ -7,7 +7,7 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import Userfront, { SignupForm, LoginForm, PasswordResetForm } from "@userfront/toolkit/react";
+import Userfront, { SignupForm, LoginForm, PasswordResetForm, LogoutButton } from "@userfront/toolkit/react";
 
 Userfront.init("demo1234");
 
@@ -30,6 +30,12 @@ export default function App() {
               <Link to="/dashboard">Dashboard</Link>
             </li>
           </ul>
+          {Userfront.tokens.accessToken && (
+            <div style={{width: "200px"}}>
+              <LogoutButton />
+            </div>
+          )}
+                 
         </nav>
 
         <Routes>

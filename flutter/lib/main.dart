@@ -7,8 +7,8 @@ Userfront? userfront;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Replace with your tenant ID and live domain. The domain here determines
-  // whether Userfront is in test mode or live mode.
+  // Replace with your tenant ID and domain. Use your live domain for
+  // production apps, and your other domains for testing and development i.e http://localhost:3000.
   userfront = await Userfront.init("5nxgv76b", "https://c70nhc.csb.app");
   runApp(const MyApp());
 }

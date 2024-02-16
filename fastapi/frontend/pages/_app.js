@@ -1,9 +1,8 @@
 import Userfront from "@userfront/toolkit/react";
 
-import "@userfront/react/themes/default.css";
 import "../styles/globals.css";
 
-Userfront.init(process.env.NEXT_PUBLIC_USERFRONT_ACCOUNT_ID);
+Userfront.init(process.env.NEXT_PUBLIC_USERFRONT_WORKSPACE_ID);
 
 function MyApp({ Component, pageProps }) {
   return (

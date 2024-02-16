@@ -2,13 +2,15 @@
 
 This is a simple demo Flutter app that uses the `userfront_flutter` library for mobile authentication.
 
-## Installation
+## Installation and setup
 
 - Have the Flutter dev environment installed
   - Once the `flutter` command line tool is installed, use `flutter doctor` to check configuration
 - Clone the repo
 - Install packages: `flutter pub get`
-- Run the app in an iOS or Android emulator
+- Set your workspace ID ([located in your dashboard](https://userfront.com/dashboard)) and live domain in `lib/main.dart` (line 12) or use those provided.
+  - To use your own workspace and live domain make sure the url on line 63 is where your login form lives. [See userfront flutter docs](https://github.com/userfront/flutter#usage).
+- Run the app in an iOS or Android emulator with `flutter run`
   - On MacOS, the VS Code Dart/Flutter plugin launches an iOS emulator connected to the running code in watch mode
 
 ## Concepts
@@ -38,9 +40,3 @@ To enable deep linking with either `flutter_web_auth` or another library or mech
 **`ios/Runner/info.plist`**
 
 To enable deep linking via a custom library or mechanism, we need to add some entries to the `info.plist`. If using `flutter_web_auth`, that library takes care of this for us.
-
-**`pubspec.yaml`**
-
-The `userfront_flutter` library is added to the `dependencies` field.
-
-This happens automatically if you use `flutter pub add userfront_flutter` on the command line to install the library.

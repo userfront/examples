@@ -14,6 +14,17 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ```sh
 npm install
+
+```
+Configure Userfront in `src/App.vue` with your workspace ID. Add your live domain to use live mode, or no domain to use test mode. Your workspace ID can be found under your workspace name in your [dashboard](https://userfront.com/dashboard).
+
+#### Live mode
+```js
+Userfront.init("abcd1234", { domain: "your-domain.com" });
+```
+#### Test mode
+```js
+Userfront.init("abcd1234");
 ```
 
 ### Compile and Hot-Reload for Development

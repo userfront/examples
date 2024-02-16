@@ -5,7 +5,7 @@
 import FlutterMacOS
 import Foundation
 
-import flutter_inappwebview
+import flutter_inappwebview_macos
 import flutter_web_auth
 import shared_preferences_foundation
 

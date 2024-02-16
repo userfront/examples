@@ -3,18 +3,18 @@ services:
   backend:
     container_name: fastapi
     build: ./backend
+    env_file:
+      - .env.local
     ports:
       - "8080:8080"
     volumes:
       - ./backend:/code
-    environment:
-      - USERFRONT_PUBLIC_KEY
   frontend:
     container_name: nextjs
     build: ./frontend
+    env_file:
+      - .env.local
     volumes:
       - ./frontend:/code
     ports:
       - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_USERFRONT_ACCOUNT_ID=$USERFRONT_ACCOUNT_ID
