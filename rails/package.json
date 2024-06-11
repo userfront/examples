@@ -1,0 +1,14 @@
+{
+  "name": "rails-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:shell": "docker compose exec  -e PGPASSWORD=somepass db psql -U someuser -d app",
+    "be:shell": "docker compose exec backend /bin/bash",
+    "fe:shell": "docker compose exec frontend /bin/bash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
