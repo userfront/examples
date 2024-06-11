@@ -8,7 +8,9 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@userfront/node": "^1",
+    "@userfront/node": "^1"
+  },
+  "devDependencies": {
     "dotenv-cli": "^7"
   }
 }
