@@ -1,14 +1,15 @@
 {
-  "name": "node",
+  "name": "node-ts",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "dotenv -- node index.js",
-    "start": "node index.js"
+    "dev": "dotenv -- tsx index.ts",
+    "start": "tsx index.ts"
   },
   "dependencies": {
     "@userfront/node": "^1",
-    "dotenv-cli": "^7"
+    "dotenv-cli": "^7",
+    "tsx": "^4"
   }
 }
