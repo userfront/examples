@@ -1,0 +1,44 @@
+services:
+  db:
+    container_name: db
+    image: postgres:16
+    restart: always
+    environment:
+      - POSTGRES_USER=someuser
+      - POSTGRES_PASSWORD=somepass
+      - POSTGRES_DB=app
+      # Allow history to live longer than lifetime of the container
+      - PSQL_HISTORY=/usr/src/app/.psql_history
+    volumes:
+      - ./.psql_history:/usr/src/app/.psql_history
+    ports:
+      - "5432:5432"
+  backend:
+    depends_on:
+     # Wait for frontend to generate a SSL certificate before starting backend
+     - frontend
+     # Wait for the db to accept connections
+     - db
+    container_name: rails
+    build: ./backend
+    environment:
+      - RAILS_ENV=development
+    env_file:
+      - .env.local
+    ports:
+      - "8080:3000"
+    volumes:
+      - ./backend:/code
+      - certificates:/code/certificates
+  frontend:
+    container_name: nextjs
+    build: ./frontend
+    env_file:
+      - .env.local
+    volumes:
+      - ./frontend:/code
+      - certificates:/code/certificates
+    ports:
+      - "3000:3000"
+volumes:
+  certificates:
