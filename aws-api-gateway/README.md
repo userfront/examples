@@ -24,7 +24,7 @@ cd example/aws-api-gateway
 npm install
 ```
 
-Replace the `jwtPublicKey` in `/index.js` with your own JWT public key found [here](https://userfront.com/dashboard/jwt):
+Replace the `jwtPublicKey` in `/index.js` with your own JWT public key found [here](https://userfront.com/dashboard/jwt?tab=generate):
 
 ```
 -----BEGIN RSA PUBLIC KEY-----

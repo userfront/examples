@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from jose import JWTError, jwt
 
-USERFRONT_API_KEY = os.getenv("USERFRONT_PUBLIC_KEY")
+USERFRONT_API_KEY = os.getenv("USERFRONT_JWT_PUBLIC_KEY")
 ALGORITHM = "RS256"
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
