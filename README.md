@@ -3,6 +3,7 @@
 This is a collection of examples for using Userfront with various frontend and backend technologies.
 
 - [AWS API Gateway](https://github.com/userfront/examples/tree/main/aws-api-gateway)
+- [Express](https://github.com/userfront/examples/tree/main/express)
 - [FastAPI](https://github.com/userfront/examples/tree/main/fastapi)
 - [Flutter](https://github.com/userfront/examples/tree/main/flutter)
 - [Next.js v14 (App Router)](https://github.com/userfront/examples/tree/main/next-14)
