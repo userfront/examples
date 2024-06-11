@@ -1,6 +1,8 @@
-version: '3.8'
 services:
   backend:
+    depends_on:
+     # Wait for frontend to generate a SSL certificate before starting backend
+     - frontend
     container_name: fastapi
     build: ./backend
     env_file:
@@ -9,6 +11,7 @@ services:
       - "8080:8080"
     volumes:
       - ./backend:/code
+      - certificates:/code/certificates
   frontend:
     container_name: nextjs
     build: ./frontend
@@ -16,5 +19,7 @@ services:
       - .env.local
     volumes:
       - ./frontend:/code
+      - certificates:/code/certificates
     ports:
       - "3000:3000"
+

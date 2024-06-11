@@ -55,7 +55,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  // Verify the token using the Userfront public key
+  jwt.verify(token, process.env.USERFRONT_JWT_PUBLIC_KEY, (err, auth) => {
+    if (err) return res.sendStatus(403); // Return 403 if there is an error verifying
+    req.auth = auth;
+    next();
+  });
+}
+```
 
 ### Advanced Configuration
 
