@@ -1,128 +1,70 @@
-# React example
+# Getting Started with Create React App
 
-In this example, we will add authentication and access control to a React application with [Userfront](https://userfront.com).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [`@userfront/react`](https://www.npmjs.com/package/@userfront/react) for auth.
 
-See this [walkthrough](https://userfront.com/docs/examples/react) to see how we constructed this app from scratch.
+## Available Scripts
 
-## Setup
-1. In `src/App.js` replace `demo1234` with your workspace ID found on your [dashboard](https://userfront.com/dashboard) under the name of your workspace. To use this in live mode add your live domains as well.
-```js
-Userfront.init("abcd1234", { domain: "your-domain.com" });
-```
-2. Run `npm start`
+In the project directory, you can run:
 
-## React authentication
+### `npm start`
 
-At a high level, React’s responsibility in authentication is to:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-1. Send an initial request to Userfront to get the access token. This is what the signup and login forms do.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-2. Send the access token to your server with each subsequent request.
+### `npm test`
 
-## App layout and functionality
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-We have a very simple app with routing:
+### `npm run build`
 
-| Route        | Description                              |
-| :----------- | :--------------------------------------- |
-| `/`          | Home page                                |
-| `/login`     | Login page                               |
-| `/reset`     | Password reset page                      |
-| `/dashboard` | User dashboard, for logged in users only |
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-This is a fully functional app. Users can log in, sign up, reset their password, and view their dashboard. When a user is logged in, they can view the dashboard. If the user is not logged in, they will be redirected to the login page.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## React authentication with an API -> Next steps
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-We saw above that the frontend has an access token available as `Userfront.tokens.accessToken` when the user is logged in. This is a JWT access token that you can also use on your backend to protect your API endpoints.
+### `npm run eject`
 
-There are many libraries to read and verify JWTs across various languages. Here are a few popular libraries for handling JWTs:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-|                                                       |                                           |                                              |                                           |
-| ----------------------------------------------------- | ----------------------------------------- | -------------------------------------------- | ----------------------------------------- |
-| [Node.js](https://github.com/auth0/node-jsonwebtoken) | [.NET](https://github.com/jwt-dotnet/jwt) | [Python](https://github.com/jpadilla/pyjwt/) | [Java](https://github.com/auth0/java-jwt) |
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Your React application can send the JWT access token as a `Bearer` token inside the `Authorization` header. For example:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-```js
-// Example of calling an endpoint with a JWT
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-async function getInfo() {
-  const res = await window.fetch("/your-endpoint", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${Userfront.tokens.accessToken}`,
-    },
-  });
+## Learn More
 
-  console.log(res);
-}
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-getInfo();
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-To handle a request like this, your backend should read the JWT access token from the `Authorization` header and verify that it is valid using the JWT public key found in your Userfront dashboard.
+### Code Splitting
 
-Here is an example of Node.js middleware to read and verify the JWT access token:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-```js
-// Node.js example (Express.js)
+### Analyzing the Bundle Size
 
-const jwt = require("jsonwebtoken");
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-function authenticateToken(req, res, next) {
-  // Read the JWT access token from the request header
-  const authHeader = req.headers["authorization"];
-  const token = authHeader && authHeader.split(" ")[1];
-  if (token == null) return res.sendStatus(401); // Return 401 if no token
+### Making a Progressive Web App
 
-  // Verify the token using the Userfront public key
-  jwt.verify(token, process.env.USERFRONT_PUBLIC_KEY, (err, auth) => {
-    if (err) return res.sendStatus(403); // Return 403 if there is an error verifying
-    req.auth = auth;
-    next();
-  });
-}
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Using this approach, any invalid or missing tokens are rejected by your server. You can also reference the contents of the token later in the route handlers using the `req.auth` object:
+### Advanced Configuration
 
-```js
-console.log(req.auth);
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-// =>
-{
-  mode: 'test',
-  tenantId: 'demo1234',
-  userId: 1,
-  userUuid: 'ab53dbdc-bb1a-4d4d-9edf-683a6ca3f609',
-  isConfirmed: false,
-  authorization: {
-    demo1234: {
-      roles: ["admin"],
-    },
-  },
-  sessionId: '35d0bf4a-912c-4429-9886-cd65a4844a4f',
-  iat: 1614114057,
-  exp: 1616706057
-}
-```
+### Deployment
 
-With this information, you can perform further checks as desired, or use the `userId` or `userUuid` to look up user information to return.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-For example, if you wanted to limit a route to admin users, you could check against the `authorization` object from the verified access token:
+### `npm run build` fails to minify
 
-```js
-// Node.js example (Express.js)
-
-app.get("/users", (req, res) => {
-  const authorization = req.auth.authorization["demo1234"] || {};
-
-  if (authorization.roles.includes("admin")) {
-    // Allow access
-  } else {
-    // Deny access
-  }
-});
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
