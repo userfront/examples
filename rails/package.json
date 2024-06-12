@@ -7,6 +7,7 @@
     "db:shell": "docker compose exec  -e PGPASSWORD=somepass db psql -U someuser -d app",
     "be:shell": "docker compose exec backend /bin/bash",
     "fe:shell": "docker compose exec frontend /bin/bash",
+    "gen-cert": "(cd certificates; mkcert -install && mkcert localhost)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

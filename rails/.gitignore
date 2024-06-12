@@ -3,3 +3,4 @@
 
 # vercel
 .vercel
+certificates/*.pem
