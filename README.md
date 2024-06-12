@@ -1,11 +1,13 @@
 # Userfront Examples
 
-This is a collection of examples for using Userfront with various frontend and backend technologies. 
+This is a collection of examples for using Userfront with various frontend and backend technologies.
 
 - [AWS API Gateway](https://github.com/userfront/examples/tree/main/aws-api-gateway)
 - [FastAPI](https://github.com/userfront/examples/tree/main/fastapi)
 - [Flutter](https://github.com/userfront/examples/tree/main/flutter)
 - [Next.js](https://github.com/userfront/examples/tree/main/nextjs)
+- [Node](https://github.com/userfront/examples/tree/main/node)
+- [Node w/ TypeScript](https://github.com/userfront/examples/tree/main/node-ts)
 - [PHP](https://github.com/userfront/examples/tree/main/php)
 - [React](https://github.com/userfront/examples/tree/main/react)
 - [React Native](https://github.com/userfront/examples/tree/main/react-native)

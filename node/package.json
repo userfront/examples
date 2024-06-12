@@ -1,0 +1,14 @@
+{
+  "name": "node",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "dotenv -- node index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@userfront/node": "^1",
+    "dotenv-cli": "^7"
+  }
+}
