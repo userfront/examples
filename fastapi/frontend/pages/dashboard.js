@@ -19,7 +19,7 @@ const Dashboard = ({ isLoggedIn }) => {
   }, []);
 
   async function getData() {
-    const res = await fetch("http://localhost:8080/api/data", {
+    const res = await fetch("https://localhost:8080/api/data", {
       method: 'GET',
       headers: {
         "Content-Type": "application/json",
