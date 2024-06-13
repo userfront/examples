@@ -25,7 +25,7 @@ const Dashboard = ({ isLoggedIn }) => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${Userfront.tokens.accessToken}`
       }
-  });
+    });
     const body = await res.json();
     setData(body);
   }
