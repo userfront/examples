@@ -1,5 +1,5 @@
 services:
-  rails:
+  fastapi:
     build: ./backend
     env_file:
       - .env.local
@@ -17,3 +17,4 @@ services:
       - ./certificates:/code/certificates
     ports:
       - "3000:3000"
+

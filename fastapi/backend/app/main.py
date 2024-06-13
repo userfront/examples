@@ -4,6 +4,7 @@ from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from fastapi.middleware.cors import CORSMiddleware
 
+
 from pydantic import BaseModel
 from jose import JWTError, jwt
 
@@ -14,10 +15,10 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 app = FastAPI()
 
 origins = [
-    "http://localhost",
-    "http://localhost:3000",
-    "http://backend",
-    "http://backend:3000",
+    "https://localhost",
+    "https://localhost:3000",
+    "https://backend",
+    "https://backend:3000",
 ]
 
 app.add_middleware(
@@ -27,7 +28,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 class TokenData(BaseModel):
     mode: str

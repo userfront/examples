@@ -1,13 +1,12 @@
 {
-  "name": "rails-example",
+  "name": "fastapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "An example implemntation of Nextjs + FastAPI.",
   "main": "index.js",
   "scripts": {
-    "be:shell": "docker compose exec backend /bin/bash",
-    "fe:shell": "docker compose exec frontend /bin/bash",
     "gen-cert": "(cd certificates; mkcert -install && mkcert localhost)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": ""
+  "author": "",
+  "license": "ISC"
 }
