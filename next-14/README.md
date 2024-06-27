@@ -1,36 +1,40 @@
+# Userfront Next 14 Example
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and using [`@userfront/next`](https://www.npmjs.com/package/@userfront/next) for auth.
+
+---
+
+**Curious about how to use the Next SDK on your existing application?**
+
+[Read the quickstart instructions on Userfront.](https://userfront.com/docs/quickstart?v=next)
+
+[Read the guide on Userfront.](https://userfront.com/docs/examples/next)
+
+## Requirements
+
+- Node.js v18 or later
 
 ## Getting Started
 
-First, run the development server:
+Install packages:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```shell
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Add your tenant id and api key to your `.env`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+USERFRONT_TENANT_ID="..."
+USERFRONT_API_KEY="..." # Admin key
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Run the development server with hot reloading:
 
-## Learn More
+```shell
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Troubleshooting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Need some help? We're always here and happy to help. Please do not hesitate to [contact support](https://userfront.com/contact).

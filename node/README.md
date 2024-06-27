@@ -1,6 +1,6 @@
-# Userfront React Example
+# Userfront Node Example
 
-This is a [React](https://react.dev/) project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [`@userfront/react`](https://www.npmjs.com/package/@userfront/react) for auth.
+This is a [Node](https://nodejs.org/en) project using [`@userfront/node`](https://www.npmjs.com/package/@userfront/node) for auth.
 
 ## Requirements
 
@@ -14,6 +14,18 @@ Install packages:
 npm install
 ```
 
+### Production
+
+Add your `USERFRONT_TENANT_ID` and `USERFRONT_API_KEY` as environment secrets.
+
+Run the script:
+
+```shell
+npm run start
+```
+
+### Development
+
 Add your tenant id and api key to your `.env`:
 
 ```shell
@@ -21,10 +33,10 @@ USERFRONT_TENANT_ID="..."
 USERFRONT_API_KEY="..." # Admin key
 ```
 
-Run the development server with hot reloading:
+Run the script with live reloading (watch mode):
 
 ```shell
-npm run start
+npm run dev
 ```
 
 ## Troubleshooting

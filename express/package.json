@@ -1,0 +1,21 @@
+{
+  "name": "express",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "dotenv -- nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@userfront/node": "^1",
+    "cookie-parser": "^1",
+    "debug": "^2",
+    "express": "^4",
+    "http-errors": "^1",
+    "morgan": "^1"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7",
+    "nodemon": "^3"
+  }
+}
