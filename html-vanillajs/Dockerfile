@@ -6,10 +6,10 @@ WORKDIR /code
 COPY ./requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY ./app /code
+COPY ./src /code
 
 CMD [\
-  "uvicorn", "main:app", \
+  "uvicorn", "server:app", \
   "--host", "localhost", "--port", "8080", \
   "--ssl-certfile", "/code/certificates/localhost.pem", \
   "--ssl-keyfile", "/code/certificates/localhost-key.pem", \

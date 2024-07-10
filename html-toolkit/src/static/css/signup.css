@@ -1,0 +1,18 @@
+button,
+input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#alert {
+  display: none;
+  margin-bottom: 10px;
+}
+
+#alert .error {
+  color: red;
+}
+
+#alert .success {
+  color: green;
+}

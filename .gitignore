@@ -1,2 +1,5 @@
 .DS_Store
 .next/
+__pycache__
+.env.local
+**/certificates/*.pem
