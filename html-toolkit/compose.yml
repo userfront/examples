@@ -1,0 +1,10 @@
+services:
+  fastapi:
+    build: .
+    env_file:
+      - .env.local
+    ports:
+      - "8080:8080"
+    volumes:
+      # - ./src:/code
+      - ./certificates:/code/certificates
