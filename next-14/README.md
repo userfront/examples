@@ -25,7 +25,6 @@ npm install
 Add your tenant id and api key to your `.env`:
 
 ```shell
-USERFRONT_TENANT_ID="..."
 NEXT_PUBLIC_USERFRONT_WORKSPACE_ID="..."
 USERFRONT_API_KEY="..." # Admin key
 ```
