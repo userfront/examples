@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <UserfrontProvider
-          tenantId={process.env.NEXT_PUBLIC_USERFRONT_TENANT_ID ?? ""}
+          tenantId={process.env.NEXT_PUBLIC_USERFRONT_WORKSPACE_ID ?? ""}
         >
           {children}
         </UserfrontProvider>
