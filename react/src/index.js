@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserfrontProvider tenantId={process.env.USERFRONT_TENANT_ID}>
+    <UserfrontProvider tenantId={process.env.REACT_APP_USERFRONT_TENANT_ID}>
       <App />
     </UserfrontProvider>
   </React.StrictMode>

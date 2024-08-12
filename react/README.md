@@ -17,7 +17,7 @@ npm install
 Add your tenant id and api key to your `.env`:
 
 ```shell
-USERFRONT_TENANT_ID="..."
+REACT_APP_USERFRONT_TENANT_ID="..."
 USERFRONT_API_KEY="..." # Admin key
 ```
 
