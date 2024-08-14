@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    env_file:
+      - .env.local
+    ports:
+      - "8080:8080"
+    volumes:
+      # - ./backend:/code
+      - ./certificates:/code/src/main/resources/certificates
+  frontend:
+    build: ./frontend
+    env_file:
+      - .env.local
+    volumes:
+      # - ./frontend:/code
+      - ./certificates:/code/certificates
+    ports:
+      - "3000:3000"
