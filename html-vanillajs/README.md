@@ -21,7 +21,7 @@ _Note3: The included Dockerfiles are not ready for production. See the appropria
 1. install a localhost CA and generate a localhost cert
    > (cd certificates; mkcert -install && mkcert localhost)
 1. Have the following set as environment variables in `.env.local` (make sure you are in "test mode"):
-    1. USERFRONT_JWT_PUBLIC_KEY (Can be found at https://userfront.com/dashboard/jwt?tab=generate )
+    1. USERFRONT_JWT_PUBLIC_KEY (Can be found at https://userfront.com/dashboard/jwt?tab=public )
     1. Update `demo1234` to be your WorkspaceId in `init.js`. (Can be found at https://userfront.com/dashboard/workspaces )
 
 ## Running

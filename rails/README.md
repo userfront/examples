@@ -16,7 +16,7 @@ _Note: The included Dockerfiles are not ready for production. See the appropriat
 1. install a localhost CA and generate a localhost cert
    > npm run gen-cert
 1. Have the following set as environment variables in `.env.local`:
-    1. USERFRONT_JWT_PUBLIC_KEY (Can be found at https://userfront.com/dashboard/jwt?tab=generate )
+    1. USERFRONT_JWT_PUBLIC_KEY (Can be found at https://userfront.com/dashboard/jwt?tab=public )
     1. NEXT_PUBLIC_USERFRONT_WORKSPACE_ID (Can be found at https://userfront.com/dashboard )
 
 ## Running
