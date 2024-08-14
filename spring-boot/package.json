@@ -1,0 +1,14 @@
+{
+  "name": "spring-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "be:shell": "docker compose exec backend /bin/bash",
+    "be:build-base": "(cd backend; docker build -f Dockerfile.base -t spring-example-backend-base:latest .)",
+    "fe:shell": "docker compose exec frontend /bin/bash",
+    "gen-cert": "(cd certificates; mkcert -install && mkcert localhost)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
+}

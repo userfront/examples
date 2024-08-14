@@ -1,0 +1,12 @@
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    # org.springframework.boot.autoconfigure: DEBUG
+
+server:
+  port: 8080
+  ssl:
+    certificate: "file:/code/src/main/resources/certificates/localhost.pem"
+    certificate-private-key: "file:/code/src/main/resources/certificates/localhost-key.pem"
