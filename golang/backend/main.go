@@ -3,9 +3,7 @@ package main
 import (
 	"example/handler"
 	"example/server"
-	"fmt"
 	"log"
-	"net/http"
 	"os"
 )
 
@@ -20,10 +18,8 @@ func main() {
 	router.Use(authMiddleware.RequireAuth)
 	router.GET("/", handler.RootHandler)
 
-	srv := http.Server{}
-	srv.Addr = fmt.Sprintf("0.0.0.0:8080")
-	srv.Handler = router
-	if err := srv.ListenAndServe(); err != nil {
+	if err := router.RunTLS("0.0.0.0:8080", "/code/certificates/localhost.pem", "/code/certificates/localhost-key.pem"); err != nil {
 		log.Fatal(err)
 	}
+
 }
