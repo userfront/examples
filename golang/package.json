@@ -1,7 +1,7 @@
 {
-  "name": "fastapi",
+  "name": "golang",
   "version": "1.0.0",
-  "description": "An example implemntation of Nextjs + FastAPI.",
+  "description": "An example implemntation of Nextjs + Golang.",
   "main": "index.js",
   "scripts": {
     "gen-cert": "(cd certificates; mkcert -install && mkcert localhost)",

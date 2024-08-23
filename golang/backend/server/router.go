@@ -20,9 +20,15 @@ func NewRouter() *gin.Engine {
 	router := gin.Default()
 	corsConfig := cors.DefaultConfig()
 	corsConfig.CustomSchemas = cors.DefaultSchemas
-	corsConfig.AllowAllOrigins = true
+	corsConfig.AllowOrigins = []string{
+		"https://localhost",
+		"https://localhost:3000",
+		"https://localhost:8080",
+	}
 	corsConfig.AllowCredentials = true
 	corsConfig.AllowWildcard = true
+	corsConfig.AllowHeaders = []string{"*"}
+	corsConfig.AllowMethods = []string{"*"}
 	router.Use(cors.New(corsConfig))
 	return router
 }
