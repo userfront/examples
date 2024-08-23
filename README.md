@@ -6,6 +6,7 @@ This is a collection of examples for using Userfront with various frontend and b
 - [Express](https://github.com/userfront/examples/tree/main/express)
 - [FastAPI w/ Nextjs](https://github.com/userfront/examples/tree/main/fastapi)
 - [Flutter](https://github.com/userfront/examples/tree/main/flutter)
+- [Golang w/ Nextjs](https://github.com/userfront/examples/tree/main/golang)
 - [HTML + Vanilla JS + CoreJS](https://github.com/userfront/examples/tree/main/html-vanillajs)
 - [HTML + Vanilla JS + Toolkit](https://github.com/userfront/examples/tree/main/html-toolkit)
 - [Next.js v13 (Pages Router)](https://github.com/userfront/examples/tree/main/next-13)
