@@ -10,7 +10,8 @@ COPY ./app /code
 
 CMD [\
   "uvicorn", "main:app", \
-  "--host", "localhost", "--port", "8080", \
+  "--host", "0.0.0.0", \
+  "--port", "8080", \
   "--ssl-certfile", "/code/certificates/localhost.pem", \
   "--ssl-keyfile", "/code/certificates/localhost-key.pem", \
   "--reload" \
