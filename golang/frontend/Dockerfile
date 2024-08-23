@@ -1,4 +1,4 @@
-FROM node:18 AS base
+FROM node:20 AS base
 # From https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
 
 
